@@ -17,8 +17,7 @@ enum SignalingState {
 typedef void SignalingStateCallback(SignalingState state);
 typedef void StreamStateCallback(MediaStream stream);
 typedef void OtherEventCallback(dynamic event);
-typedef void DataChannelMessageCallback(
-	RTCDataChannel dc, RTCDataChannelMessage data);
+typedef void DataChannelMessageCallback(RTCDataChannel dc, RTCDataChannelMessage data);
 typedef void DataChannelCallback(RTCDataChannel dc);
 
 class Signaling {
@@ -44,6 +43,7 @@ class Signaling {
 
 
 	Map<String, dynamic> _iceServers = {
+		"sdpSemantics": "plan-b",
 		'iceServers': [
 			{'url': 'stun:stun.l.google.com:19302'},
 			/*

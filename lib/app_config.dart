@@ -8,7 +8,7 @@ class Env {
 	final String apiBaseUrl;
 
 	factory Env.dev() {
-		return Env._(apiBaseUrl: "http://10.0.0.28:8000");
+		return Env._(apiBaseUrl: "http://10.0.0.28:3000");
 	}
 }
 
